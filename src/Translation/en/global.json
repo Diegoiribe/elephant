@@ -15,5 +15,31 @@
   },
   "News": {
     "title": "News"
+  },
+  "Contact": {
+    "title": "Subscribe to our newsletter",
+    "placeholder": "Your email",
+    "button": "Subscribe",
+    "subtitle": "Subscribe to be notified of new content on Elephant"
+  },
+  "Footer": {
+    "title": "Elephant",
+    "subtitle": "Entreprehneurship, Create Art, Design & Caps",
+    "option-en": "English",
+    "option-es": "Spanish",
+    "sectionone": "Guide",
+    "subtitle-one-one": "Home",
+    "subtitle-one-two": "News",
+    "subtitle-one-three": "Contact Us",
+    "subtitle-one-four": "Shop",
+    "sectiontwo": "About Elephant",
+    "subtitle-two-one": "About Us",
+    "subtitle-two-two": "Contact Us",
+    "subtitle-two-three": "Privacy Policy",
+    "subtitle-two-four": "Cookie Policy",
+    "subtitle-two-five": "Terms & Conditions",
+    "sectionthree": "Contact",
+    "subtitle-three-one": "Elephant@outlook.es",
+    "subtitle-three-two": "66-74-50-70-62"
   }
 }

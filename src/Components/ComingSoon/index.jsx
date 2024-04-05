@@ -67,7 +67,7 @@ const ComingSoon = () => {
       style={{ backgroundColor: '#f7f7f7' }}
     >
       <div className="w-4/5 flex justify-between items-center">
-        <h1 className="text-6xl font-bold text-start w-4/5 h-24">
+        <h1 className="text-6xl font-bold text-start mac:w-4/5 phone:w-full overflow-hidden h-24">
           {t('News.title')}
         </h1>
         {phone ? null : (

@@ -1,5 +1,5 @@
 import React from 'react'
-import XIcon from '@mui/icons-material/X'
+import LanguageIcon from '@mui/icons-material/Language'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { useTranslation } from 'react-i18next'
@@ -14,8 +14,10 @@ const Description = () => {
   return (
     <div className="mac:w-4/5 phone:w-[90%] flex phone:flex-col mac:flex-row justify-beetwen mt-10 ">
       <div className="mac:w-1/5 phone:w-full flex flex-col gap-5 phone:mb-10 mac:mb-0">
-        <h1 className="text-4xl font-medium overflow-hidden">Elephant</h1>
-        <p className="text-sm">Entrepreneurship, Create Art, Design & Caps</p>
+        <h1 className="text-4xl font-medium overflow-hidden">
+          {t('Footer.tile')}
+        </h1>
+        <p className="text-sm">{t('Footer.subtitle')}</p>
         <select
           name="language"
           id="language"
@@ -24,60 +26,60 @@ const Description = () => {
           defaultValue="en"
         >
           <option value="en" className="font-medium cursor-pointer">
-            English
+            {t('Footer.option-en')}
           </option>
           <option value="es" className="font-medium cursor-pointer">
-            Spanish
+            {t('Footer.option-es')}
           </option>
         </select>
       </div>
       <div className='"mac:w-4/5 phone:w-full flex flex-row flex-wrap gap-5 phone:justify-center'>
         <div className=" flex flex-col gap-5 phone:w-[45%]">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
-            Guide
+            {t('Footer.sectionone')}
           </h2>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Home
+            {t('Footer.subtitle-one-one')}
           </p>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            News
+            {t('Footer.subtitle-one-two')}
           </p>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Contact
+            {t('Footer.subtitle-one-three')}
           </p>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Shop
+            {t('Footer.subtitle-one-four')}
           </p>
         </div>
         <div className=" flex flex-col gap-5 phone:w-[45%]">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
-            Sobre Elephant
+            {t('Footer.sectiontwo')}
           </h2>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Quienes somos
+            {t('Footer.subtitle-two-one')}
           </p>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Politica De Privacidad
+            {t('Footer.subtitle-two-two')}
           </p>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Condiciones De Servicio
+            {t('Footer.subtitle-two-three')}
           </p>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Politica De Cookies
+            {t('Footer.subtitle-two-four')}
           </p>
           <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
-            Divulgacion De Afiliacion
+            {t('Footer.subtitle-two-five')}
           </p>
         </div>
         <div className=" flex flex-col gap-5 phone:w-[100%] phone:mb-10 mac:mb-0">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
-            Contacto
+            {t('Footer.sectionthree')}
           </h2>
           <p className="font-medium phone:text-sm mac:text-[16px]">
-            Elephant@outlook.es
+            {t('Footer.subtitle-three-one')}
           </p>
           <p className="font-medium phone:text-sm mac:text-[16px]">
-            6674507062
+            {t('Footer.subtitle-three-two')}
           </p>
         </div>
         <div className=" flex justify-around gap-5 phone:w-full">
@@ -85,7 +87,7 @@ const Description = () => {
             href="https://elephant-two.vercel.app/"
             className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"
           >
-            <XIcon />
+            <LanguageIcon />
           </a>
           <span className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white">
             <FacebookIcon />

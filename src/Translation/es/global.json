@@ -15,5 +15,31 @@
   },
   "News": {
     "title": "Noticias"
+  },
+  "Contact": {
+    "title": "Suscribete a nuestro boletin",
+    "placeholder": "Tu correo electronico",
+    "button": "Subscribete",
+    "subtitle": "Suscribirse para ser notificado de nuevos contenidos en Elephant"
+  },
+  "Footer": {
+    "title": "Elephant",
+    "subtitle": "© 2021 Elephant. Todos los derechos reservados.",
+    "option-en": "Ingles",
+    "option-es": "Español",
+    "sectionone": "Guia",
+    "subtitle-one-one": "Inicio",
+    "subtitle-one-two": "Noticias",
+    "subtitle-one-three": "Contacto",
+    "subtitle-one-four": "Tienda",
+    "sectiontwo": "Sobre Elephant",
+    "subtitle-two-one": "Quienes somos",
+    "subtitle-two-two": "Politica De Privacidad",
+    "subtitle-two-three": "Condiciones De Servicio",
+    "subtitle-two-four": "Politica De Cookies",
+    "subtitle-two-five": "Divulgacion De Afiliacion",
+    "sectionthree": "Contacto",
+    "subtitle-three-one": "Elephant@outlook.es",
+    "subtitle-three-two": "Tel: 66-74-50-70-62"
   }
 }

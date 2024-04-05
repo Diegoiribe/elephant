@@ -18,7 +18,7 @@ const Slidder = ({ isOpen, setIsOpen }) => {
     >
       <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
-        className="mac:w-4/5 phone:w-full mac:mt-28 h-full  flex flex-col items-center mac:gap-10 phone:p-5 mac:py-32 justify-between"
+        className="mac:w-4/5 phone:w-full mac:mt-28 h-full flex flex-col items-center mac:gap-10 phone:p-5 mac:py-32 justify-around"
         style={{ display: isOpen ? 'none' : null }}
       >
         <h1 className="text-white  tablet:text-6xl phone:text-4xl font-bold  overflow-hidden phone:text-center">

@@ -87,7 +87,7 @@ const ComingSoon = () => {
           </div>
         )}
       </div>
-      <div className="w-full phone:h-5/6 mac:h-4/6 flex justify-end">
+      <div className="w-full phone:h-[75%] mac:h-4/6 flex justify-end">
         <div
           ref={contentRef}
           className="phone:w-full mac:w-[90%] phone:h-full flex items-center overflow-auto scroll justify-between gap-3 p-5"

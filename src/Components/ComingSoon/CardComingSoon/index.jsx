@@ -70,7 +70,7 @@ const CardComingSoon = () => {
               <p className="text-5xl font-bold overflow-hidden">{item.date}</p>
             </div>
           </div>
-          <div className="p-5 flex flex-col gap-5 overflow-hidden">
+          <div className="h-1/4 p-5 flex flex-col overflow-hidden justify-between">
             <p className="font-medium text-xl">{item.title}</p>
             <p className="font-medium text-gray-500 text-sm">
               {item.description}

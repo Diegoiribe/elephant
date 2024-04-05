@@ -10,7 +10,6 @@ const Nav = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
 
   const phone = window.innerWidth < 850
-  console.log(isOpen)
 
   return (
     <>

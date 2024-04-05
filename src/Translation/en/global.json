@@ -1,0 +1,19 @@
+{
+  "Home": {
+    "name": "Elephant",
+    "sectionone": "Home",
+    "sectiontwo": "News",
+    "sectionthree": "Contact Us",
+    "sectionfour": "Shop",
+    "title": "NEW DROP FRIDAY 3PM EST",
+    "button": "Show now",
+    "subtitle": "NEVER MISS A DROP",
+    "legend": "Join the member list to know we restock a collection!",
+    "placeholder": "Email Address",
+    "buttonInput": "Subscribe",
+    "footer": "We respect your privacy"
+  },
+  "News": {
+    "title": "News"
+  }
+}

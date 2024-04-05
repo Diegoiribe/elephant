@@ -1,0 +1,19 @@
+{
+  "Home": {
+    "name": "Elephant",
+    "sectionone": "Inicio",
+    "sectiontwo": "Noticias",
+    "sectionthree": "Contacto",
+    "sectionfour": "Tienda",
+    "title": "NUEVO LANZAMIENTO ESTE VIERNES A LAS 3PM EST",
+    "button": "Comprar ahora",
+    "subtitle": "NO TE PIERDAS NUESTRO LANZAMIENTO",
+    "legend": "Suscríbase a la lista de miembros para saber cuándo reponemos una colección.",
+    "placeholder": "Correo electrónico",
+    "buttonInput": "Subscribete",
+    "footer": "Nosotros respetamos tu privacidad"
+  },
+  "News": {
+    "title": "Noticias"
+  }
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rakkas&family=Rowdies:wght@300;400;700&family=Rubik+Scribble&display=swap');
+
+* {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color de tu elección */
+  border-radius: 8px; /* El border-radius que prefieras */
+}
+
+/* Opcional: Puedes también redondear la pista de la barra */
+::-webkit-scrollbar-track {
+  background: #000000; /* Color de fondo de la pista */
+  border-radius: 8px; /* El mismo border-radius para mantener la consistencia */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* o el color que prefieras */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; /* o el tamaño que prefieras */
+}

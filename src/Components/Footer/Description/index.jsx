@@ -1,5 +1,5 @@
 import React from 'react'
-import LanguageIcon from '@mui/icons-material/Language'
+import XIcon from '@mui/icons-material/X'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { useTranslation } from 'react-i18next'
@@ -33,8 +33,8 @@ const Description = () => {
           </option>
         </select>
       </div>
-      <div className='"mac:w-4/5 phone:w-full flex flex-row flex-wrap gap-5 phone:justify-center'>
-        <div className=" flex flex-col gap-5 phone:w-[45%]">
+      <div className='"mac:w-4/5 phone:w-full flex flex-row phone:flex-wrap mac:flex-nowrap gap-5 phone:justify-center'>
+        <div className=" flex flex-col gap-5 phone:w-[45%] mac:w-1/5">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectionone')}
           </h2>
@@ -51,7 +51,7 @@ const Description = () => {
             {t('Footer.subtitle-one-four')}
           </p>
         </div>
-        <div className=" flex flex-col gap-5 phone:w-[45%]">
+        <div className=" flex flex-col gap-5 phone:w-[45%] mac:w-1/5">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectiontwo')}
           </h2>
@@ -71,23 +71,20 @@ const Description = () => {
             {t('Footer.subtitle-two-five')}
           </p>
         </div>
-        <div className=" flex flex-col gap-5 phone:w-[100%] phone:mb-10 mac:mb-0">
+        <div className=" flex flex-col gap-5 phone:w-[100%] phone:mb-10 mac:mb-0 mac:w-1/5">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectionthree')}
           </h2>
           <p className="font-medium phone:text-sm mac:text-[16px]">
             {t('Footer.subtitle-three-one')}
           </p>
-          <p className="font-medium phone:text-sm mac:text-[16px]">
-            {t('Footer.subtitle-three-two')}
-          </p>
         </div>
-        <div className=" flex justify-around gap-5 phone:w-full">
+        <div className=" flex justify-around gap-5 phone:w-full mac:w-1/5">
           <a
             href="https://elephant-two.vercel.app/"
             className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"
           >
-            <LanguageIcon />
+            <XIcon />
           </a>
           <span className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white">
             <FacebookIcon />

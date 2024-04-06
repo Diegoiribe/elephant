@@ -5,6 +5,8 @@ import StorefrontIcon from '@mui/icons-material/Storefront'
 import NewReleasesIcon from '@mui/icons-material/NewReleases'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 
 const Nav = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
@@ -33,12 +35,13 @@ const Nav = ({ isOpen, setIsOpen }) => {
             </h1>
             <button onClick={() => setIsOpen(!isOpen)} className="mac:hidden">
               {/* Aquí puedes usar un ícono para el menú de hamburguesa */}
+
               <span
                 style={{
                   color: isOpen ? 'black' : 'white'
                 }}
               >
-                Menu
+                {isOpen ? <CloseIcon /> : <MenuIcon />}
               </span>
             </button>
           </div>

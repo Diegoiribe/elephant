@@ -15,10 +15,10 @@ const Contact = () => {
         <form className="flex items-center gap-1">
           <input
             type="text"
-            className="phone:h-[60px] phone:w-[165px] mac:h-[85px] mac:w-[350px] mac:rounded-s-3xl phone:rounded-s-xl  p-5 text-xl font-medium focus:outline-none phone:text-lg mac:text-xl"
+            className="phone:h-[60px] phone:w-[165px] mac:h-[85px] mac:w-[350px] mac:rounded-s-3xl phone:rounded-s-xl  p-5 text-xl font-medium focus:outline-none phone:text-base mac:text-xl"
             placeholder={t('Contact.placeholder')}
           />
-          <button className="mac:h-[85px] mac:w-[150px] phone:h-[60px] phone:w-[100px] bg-white mac:rounded-e-3xl phone:rounded-e-xl phone:text-lg  mac:text-xl font-medium hover:bg-black hover:text-white">
+          <button className="mac:h-[85px] mac:w-[150px] phone:h-[60px] phone:w-[100px] bg-white mac:rounded-e-3xl phone:rounded-e-xl phone:text-base  mac:text-xl font-medium hover:bg-black hover:text-white">
             {t('Contact.button')}
           </button>
         </form>

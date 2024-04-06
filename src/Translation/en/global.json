@@ -30,7 +30,7 @@
     "sectionone": "Guide",
     "subtitle-one-one": "Home",
     "subtitle-one-two": "News",
-    "subtitle-one-three": "Contact Us",
+    "subtitle-one-three": "Newsletter",
     "subtitle-one-four": "Shop",
     "sectiontwo": "About Elephant",
     "subtitle-two-one": "About Us",
@@ -39,7 +39,6 @@
     "subtitle-two-four": "Cookie Policy",
     "subtitle-two-five": "Terms & Conditions",
     "sectionthree": "Contact",
-    "subtitle-three-one": "Elephant@outlook.es",
-    "subtitle-three-two": "66-74-50-70-62"
+    "subtitle-three-one": "support@elephantarchives.com"
   }
 }

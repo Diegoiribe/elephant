@@ -5,22 +5,22 @@
     "sectiontwo": "Noticias",
     "sectionthree": "Newsletter",
     "sectionfour": "Tienda",
-    "title": "NUEVO LANZAMIENTO PROXIMAMENTE",
+    "title": "NUEVO LANZAMIENTO PRÓXIMAMENTE",
     "button": "Comprar ahora",
-    "subtitle": "NO TE PIERDAS NUESTRO LANZAMIENTO",
-    "legend": "Suscribase a la lista de miembros para recibir actualizaciones exclusivas y ofertas especiales",
+    "subtitle": "NO TE PIERDAS NUESTROS LANZAMIENTOS",
+    "legend": "Suscríbase a la lista de miembros para recibir actualizaciones exclusivas y ofertas especiales",
     "send": "¡Gracias por suscribirte!",
     "placeholder": "Correo electrónico",
-    "buttonInput": "Subscribete",
-    "footer": "Nosotros respetamos tu privacidad"
+    "buttonInput": "Suscribete",
+    "footer": "Respetamos tu privacidad"
   },
   "News": {
     "title": "Noticias"
   },
   "Contact": {
-    "title": "Suscribete a nuestro boletin",
+    "title": "Suscríbete a nuestro boletín",
     "placeholder": "Tu correo electronico",
-    "button": "Subscribete",
+    "button": "Suscríbete",
     "subtitle": "Suscribirse para ser notificado de nuevos contenidos en Elephant"
   },
   "Footer": {
@@ -28,18 +28,21 @@
     "subtitle": "© 2024 Elephant. Todos los derechos reservados.",
     "option-en": "Ingles",
     "option-es": "Español",
-    "sectionone": "Guia",
+    "sectionone": "Guía",
     "subtitle-one-one": "Inicio",
     "subtitle-one-two": "Noticias",
     "subtitle-one-three": "Novedades",
     "subtitle-one-four": "Tienda",
     "sectiontwo": "Sobre Elephant",
     "subtitle-two-one": "Quienes somos",
-    "subtitle-two-two": "Politica De Privacidad",
-    "subtitle-two-three": "Condiciones De Servicio",
-    "subtitle-two-four": "Politica De Cookies",
-    "subtitle-two-five": "Divulgacion De Afiliacion",
+    "subtitle-two-two": "Política de privacidad",
+    "subtitle-two-three": "Condiciones de servicio",
+    "subtitle-two-four": "Política de cookies",
+    "subtitle-two-five": "Divulgacion de afiliación",
     "sectionthree": "Contacto",
     "subtitle-three-one": "support@elephantarchives.com"
+  },
+  "Shop": {
+    "title": "PRÓXIMAMENTE"
   }
 }

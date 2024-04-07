@@ -134,7 +134,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
             Elephant
           </Link>
           <ul className="flex flex-row gap-5 items-center justify-center">
-            <Link to={'/'} onClick={() => setIsOpen(!isOpen)}>
+            <Link to={'/'}>
               <li className="xl:text-xl">
                 <HomeIcon className="text-white" />
               </li>

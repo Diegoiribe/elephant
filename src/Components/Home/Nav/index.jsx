@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import HomeIcon from '@mui/icons-material/Home'
 import InboxIcon from '@mui/icons-material/Inbox'
 import StorefrontIcon from '@mui/icons-material/Storefront'
@@ -9,9 +9,20 @@ import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import XIcon from '@mui/icons-material/X'
 import InstagramIcon from '@mui/icons-material/Instagram'
+import { useLocation } from 'react-router-dom'
+import { use } from 'i18next'
 
 const Nav = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
+  const [home, setHome] = useState(false)
+
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    if (pathname === '/') {
+      setHome(true)
+    }
+  }, [pathname])
 
   const phone = window.innerWidth < 850
 
@@ -65,17 +76,19 @@ const Nav = ({ isOpen, setIsOpen }) => {
                 {t('Home.sectionone')}
               </li>
             </Link>
+            {home ? (
+              <a href="/#news" onClick={() => setIsOpen(!isOpen)}>
+                <li
+                  className="text-3xl font-medium"
+                  style={{
+                    color: isOpen ? 'black' : 'white'
+                  }}
+                >
+                  {t('Home.sectiontwo')}
+                </li>
+              </a>
+            ) : null}
 
-            <a href="/#news" onClick={() => setIsOpen(!isOpen)}>
-              <li
-                className="text-3xl font-medium"
-                style={{
-                  color: isOpen ? 'black' : 'white'
-                }}
-              >
-                {t('Home.sectiontwo')}
-              </li>
-            </a>
             <Link to={'/contact'} onClick={() => setIsOpen(!isOpen)}>
               <li
                 className="text-3xl font-medium"
@@ -123,11 +136,13 @@ const Nav = ({ isOpen, setIsOpen }) => {
                 <HomeIcon className="text-white" />
               </li>
             </Link>
-            <a href="#news">
-              <li className="xl:text-xl">
-                <NewReleasesIcon className="text-white" />
-              </li>
-            </a>
+            {home ? (
+              <a href="#news">
+                <li className="xl:text-xl">
+                  <NewReleasesIcon className="text-white" />
+                </li>
+              </a>
+            ) : null}
             <Link to={'/contact'} onClick={() => setIsOpen(!isOpen)}>
               <li className="xl:text-xl">
                 <InboxIcon className="text-white" />

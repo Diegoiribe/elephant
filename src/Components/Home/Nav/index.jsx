@@ -27,14 +27,16 @@ const Nav = ({ isOpen, setIsOpen }) => {
           }}
         >
           <div className="flex justify-between items-center px-4 mac:px-10">
-            <h1
-              className="phone:text-2xl tablet:text-4xl font-bold  overflow-hidden"
+            <Link
+              to={'/'}
+              className="phone:text-2xl tablet:text-4xl font-bold
+              overflow-hidden"
               style={{
                 color: isOpen ? 'black' : 'white'
               }}
             >
               {t('Home.name')}
-            </h1>
+            </Link>
             <button onClick={() => setIsOpen(!isOpen)} className="mac:hidden">
               {/* Aquí puedes usar un ícono para el menú de hamburguesa */}
 

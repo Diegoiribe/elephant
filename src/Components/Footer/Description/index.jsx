@@ -15,9 +15,9 @@ const Description = () => {
   return (
     <div className="mac:w-4/5 phone:w-[90%] flex phone:flex-col mac:flex-row justify-beetwen mt-10 ">
       <div className="mac:w-1/5 phone:w-full flex flex-col gap-5 phone:mb-10 mac:mb-0">
-        <h1 className="text-4xl font-medium overflow-hidden">
+        <Link to={'/'} className="text-4xl font-medium overflow-hidden">
           {t('Footer.title')}
-        </h1>
+        </Link>
         <p className="text-sm">{t('Footer.subtitle')}</p>
         <select
           name="language"

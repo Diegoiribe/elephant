@@ -10,7 +10,7 @@ const ShopPage = () => {
       </div>
 
       <div className="w-full flex justify-center items-center h-[50vh] px-10">
-        <h1 className="font-bold text-6xl overflow-hidden text-center">
+        <h1 className="font-bold text-6xl overflow-hidden text-center phone:h-auto tablet:h-20 ">
           Coming Soon
         </h1>
       </div>

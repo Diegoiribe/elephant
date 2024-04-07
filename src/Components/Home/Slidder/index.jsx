@@ -69,7 +69,7 @@ const Slidder = ({ isOpen, setIsOpen }) => {
             className="flex gap-2 phone:flex-col tablet:flex-row"
           >
             <input
-              type="text"
+              type="email"
               placeholder={t('Home.placeholder')}
               className="p-4 focus:outline-none"
               title={correo}

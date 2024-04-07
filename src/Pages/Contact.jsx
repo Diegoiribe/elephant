@@ -4,6 +4,7 @@ import Contact from '../Components/Contact'
 
 const ContactPage = () => {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div className="flex flex-col gap-20">
       <div className="bg-black">

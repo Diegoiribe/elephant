@@ -53,7 +53,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
               isOpen ? 'flex' : 'hidden'
             } mac:flex mac:flex-row gap-2 items-center justify-center phone:flex-col h-full`}
           >
-            <Link to={'/'}>
+            <Link to={'/'} onClick={() => setIsOpen(!isOpen)}>
               <li
                 className="text-3xl font-medium"
                 style={{
@@ -116,7 +116,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
             Elephant
           </h1>
           <ul className="flex flex-row gap-5 items-center justify-center">
-            <Link to={'/'}>
+            <Link to={'/'} onClick={() => setIsOpen(!isOpen)}>
               <li className="xl:text-xl">
                 <HomeIcon className="text-white" />
               </li>

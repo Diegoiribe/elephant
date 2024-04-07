@@ -10,7 +10,7 @@ const CardComingSoon = () => {
       state: 'Available',
       date: '2024-03-31',
       description:
-        'Boom! That’s the sound of transformation hitting the streets. Our new logo lands with attitude, style, and that rebellious edge that defines us.'
+        'Boom! That’s the sound of transformation hitting the streets.'
     },
     {
       title: 'First Drop',

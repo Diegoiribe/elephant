@@ -2,9 +2,33 @@ import React, { useState, useEffect } from 'react'
 import fondo from '../../../img/5.gif'
 import Nav from '../Nav'
 import { useTranslation } from 'react-i18next'
+import { addDoc, collection } from 'firebase/firestore'
+import { db } from '../../../config'
 
 const Slidder = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
+  const [send, setSend] = useState(false)
+
+  const [correo, setCorreo] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let datos = {
+      correo: correo
+    }
+    const registroPost = collection(db, 'newsletter')
+    try {
+      // Intenta agregar el documento a Firestore
+      addDoc(registroPost, datos)
+      // Si la operación es exitosa, puedes hacer algo aquí,
+      // como mostrar un mensaje de éxito al usuario.
+      setSend(true)
+    } catch (error) {
+      // Si ocurre un error, lo capturas aquí y puedes manejarlo,
+      // por ejemplo, mostrando un mensaje de error al usuario.
+      console.error('Error al agregar documento: ', error)
+    }
+  }
 
   return (
     <div
@@ -33,16 +57,29 @@ const Slidder = ({ isOpen, setIsOpen }) => {
         <p className="text-white font-medium overflow-hidden phone:text-center">
           {t('Home.legend')}
         </p>
-        <div className="flex gap-2 phone:flex-col tablet:flex-row">
-          <input
-            type="text"
-            placeholder={t('Home.placeholder')}
-            className="p-4 focus:outline-none"
-          />
-          <button className="py-4 px-8 bg-white font-bold text-sm">
-            {t('Home.buttonInput')}
-          </button>
-        </div>
+        {send ? (
+          <p className="text-white font-bold text-lg">{t('Home.send')}</p>
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            className="flex gap-2 phone:flex-col tablet:flex-row"
+          >
+            <input
+              type="text"
+              placeholder={t('Home.placeholder')}
+              className="p-4 focus:outline-none"
+              title={correo}
+              onChange={(e) => setCorreo(e.target.value)}
+            />
+            <button
+              type="submit"
+              className="py-4 px-8 bg-white font-bold text-sm"
+            >
+              {t('Home.buttonInput')}
+            </button>
+          </form>
+        )}
+
         <p className="text-white text-sm font-medium overflow-hidden">
           {t('Home.footer')}
         </p>

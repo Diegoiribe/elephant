@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
+import XIcon from '@mui/icons-material/X'
+import InstagramIcon from '@mui/icons-material/Instagram'
 
 const Nav = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
@@ -48,40 +50,63 @@ const Nav = ({ isOpen, setIsOpen }) => {
           {/* Menú desplegable debajo del botón y título */}
           <ul
             className={`mt-4 mac:mt-0 px-4 mac:px-10 ${
-              isOpen ? 'block' : 'hidden'
-            } mac:flex mac:flex-row mac:gap-5 mac:items-center mac:justify-center`}
+              isOpen ? 'flex' : 'hidden'
+            } mac:flex mac:flex-row gap-2 items-center justify-center phone:flex-col h-full`}
           >
-            <li
-              className="text-xl  "
-              style={{
-                color: isOpen ? 'black' : 'white'
-              }}
-            >
-              {t('Home.sectionone')}
-            </li>
-            <li
-              className="text-xl "
-              style={{
-                color: isOpen ? 'black' : 'white'
-              }}
-            >
-              {t('Home.sectiontwo')}
-            </li>
-            <li
-              className="text-xl "
-              style={{
-                color: isOpen ? 'black' : 'white'
-              }}
-            >
-              {t('Home.sectionthree')}
-            </li>
-            <li
-              className="text-xl "
-              style={{
-                color: isOpen ? 'black' : 'white'
-              }}
-            >
-              {t('Home.sectionfour')}
+            <Link to={'/'}>
+              <li
+                className="text-3xl font-medium"
+                style={{
+                  color: isOpen ? 'black' : 'white'
+                }}
+              >
+                {t('Home.sectionone')}
+              </li>
+            </Link>
+
+            <a href="/#news" onClick={() => setIsOpen(!isOpen)}>
+              <li
+                className="text-3xl font-medium"
+                style={{
+                  color: isOpen ? 'black' : 'white'
+                }}
+              >
+                {t('Home.sectiontwo')}
+              </li>
+            </a>
+            <Link to={'/contact'}>
+              <li
+                className="text-3xl font-medium"
+                style={{
+                  color: isOpen ? 'black' : 'white'
+                }}
+              >
+                {t('Home.sectionthree')}
+              </li>
+            </Link>
+            <Link to={'/shop'}>
+              <li
+                className="text-3xl font-medium"
+                style={{
+                  color: isOpen ? 'black' : 'white'
+                }}
+              >
+                {t('Home.sectionfour')}
+              </li>
+            </Link>
+            <li className="flex gap-5 h-[30%] justify-center items-end">
+              <a
+                href="https://www.instagram.com/elephant.archives/"
+                className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"
+              >
+                <XIcon />
+              </a>
+              <a
+                href="https://www.instagram.com/elephant.archives/"
+                className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"
+              >
+                <InstagramIcon />
+              </a>
             </li>
           </ul>
         </nav>
@@ -91,21 +116,21 @@ const Nav = ({ isOpen, setIsOpen }) => {
             Elephant
           </h1>
           <ul className="flex flex-row gap-5 items-center justify-center">
-            <a href="#Home">
+            <Link to={'/'}>
               <li className="xl:text-xl">
                 <HomeIcon className="text-white" />
               </li>
-            </a>
-            <a href="#News">
+            </Link>
+            <a href="#news">
               <li className="xl:text-xl">
                 <NewReleasesIcon className="text-white" />
               </li>
             </a>
-            <a href="#Contact">
+            <Link to={'/contact'}>
               <li className="xl:text-xl">
                 <InboxIcon className="text-white" />
               </li>
-            </a>
+            </Link>
             <Link to={'/shop'}>
               <li className="xl:text-xl">
                 <StorefrontIcon className="text-white" />

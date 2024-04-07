@@ -5,10 +5,10 @@
     "sectiontwo": "Noticias",
     "sectionthree": "Contacto",
     "sectionfour": "Tienda",
-    "title": "NUEVO LANZAMIENTO ESTE VIERNES A LAS 3PM EST",
+    "title": "NUEVO LANZAMIENTO PROXIMAMENTE",
     "button": "Comprar ahora",
     "subtitle": "NO TE PIERDAS NUESTRO LANZAMIENTO",
-    "legend": "Suscríbase a la lista de miembros para saber cuándo reponemos una colección.",
+    "legend": "Suscribase a la lista de miembros para recibir actualizaciones exclusivas y ofertas especiales",
     "placeholder": "Correo electrónico",
     "buttonInput": "Subscribete",
     "footer": "Nosotros respetamos tu privacidad"
@@ -24,7 +24,7 @@
   },
   "Footer": {
     "title": "Elephant",
-    "subtitle": "© 2021 Elephant. Todos los derechos reservados.",
+    "subtitle": "© 2024 Elephant. Todos los derechos reservados.",
     "option-en": "Ingles",
     "option-es": "Español",
     "sectionone": "Guia",

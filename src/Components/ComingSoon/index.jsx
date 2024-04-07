@@ -62,7 +62,7 @@ const ComingSoon = () => {
 
   return (
     <div
-      id="News"
+      id="news"
       className="w-screen h-screen  flex flex-col  justify-center items-center"
       style={{ backgroundColor: '#f7f7f7' }}
     >
@@ -90,7 +90,7 @@ const ComingSoon = () => {
       <div className="w-full phone:h-[75%] mac:h-4/6 flex justify-end">
         <div
           ref={contentRef}
-          className="phone:w-full mac:w-[90%] phone:h-full flex items-center overflow-auto scroll justify-between gap-3 p-5"
+          className="phone:w-full mac:w-[90%] phone:h-full flex items-center overflow-auto scroll  gap-3 p-5"
         >
           <CardComingSoon />
         </div>

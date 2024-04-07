@@ -7,9 +7,9 @@ const Contact = () => {
     <div className="mac:w-4/5 phone:w-[90%] bg-white phone:h-[360px] mac:h-[600px] rounded-3xl">
       <div
         className="w-full mac:h-2/6 phone:h-2/4  flex phone:flex-col mac:flex-row phone:justify-center mac:justify-between items-center phone:px-5 mac:px-10 phone:gap-5 mac:gap-0"
-        style={{ background: '#1c92cc' }}
+        style={{ background: '#000' }}
       >
-        <p className="font-medium phone:text-[20px] mac:text-4xl overflow-hidden">
+        <p className="font-medium phone:text-[20px] mac:text-4xl overflow-hidden text-white">
           {t('Contact.title')}
         </p>
         <form className="flex items-center gap-1">
@@ -18,7 +18,7 @@ const Contact = () => {
             className="phone:h-[60px] phone:w-[165px] mac:h-[85px] mac:w-[350px] mac:rounded-s-3xl phone:rounded-s-xl  p-5 text-xl font-medium focus:outline-none phone:text-base mac:text-xl"
             placeholder={t('Contact.placeholder')}
           />
-          <button className="mac:h-[85px] mac:w-[150px] phone:h-[60px] phone:w-[100px] bg-white mac:rounded-e-3xl phone:rounded-e-xl phone:text-base  mac:text-xl font-medium hover:bg-black hover:text-white">
+          <button className="mac:h-[85px] mac:w-[150px] phone:h-[60px] phone:w-[100px] bg-white mac:rounded-e-3xl phone:rounded-e-xl phone:text-base  mac:text-xl font-medium hover:bg-gray-100 hover:text-white">
             {t('Contact.button')}
           </button>
         </form>

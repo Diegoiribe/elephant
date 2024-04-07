@@ -3,6 +3,7 @@ import XIcon from '@mui/icons-material/X'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const Description = () => {
   const [t, i18n] = useTranslation('global')
@@ -38,18 +39,30 @@ const Description = () => {
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectionone')}
           </h2>
-          <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
+          <a
+            href="#home"
+            className="font-medium cursor-pointer phone:text-sm mac:text-[16px]"
+          >
             {t('Footer.subtitle-one-one')}
-          </p>
-          <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
+          </a>
+          <a
+            href="#news"
+            className="font-medium cursor-pointer phone:text-sm mac:text-[16px]"
+          >
             {t('Footer.subtitle-one-two')}
-          </p>
-          <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
+          </a>
+          <Link
+            to={'/contact'}
+            className="font-medium cursor-pointer phone:text-sm mac:text-[16px]"
+          >
             {t('Footer.subtitle-one-three')}
-          </p>
-          <p className="font-medium cursor-pointer phone:text-sm mac:text-[16px]">
+          </Link>
+          <Link
+            to={'/shop'}
+            className="font-medium cursor-pointer phone:text-sm mac:text-[16px]"
+          >
             {t('Footer.subtitle-one-four')}
-          </p>
+          </Link>
         </div>
         <div className=" flex flex-col gap-5 phone:w-[45%] mac:w-1/5">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
@@ -71,7 +84,7 @@ const Description = () => {
             {t('Footer.subtitle-two-five')}
           </p>
         </div>
-        <div className=" flex flex-col gap-5 phone:w-[100%] phone:mb-10 mac:mb-0 mac:w-1/5">
+        <div className=" flex flex-col gap-5 phone:w-[100%] phone:mb-10 mac:mb-0 mac:w-[22%]">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectionthree')}
           </h2>

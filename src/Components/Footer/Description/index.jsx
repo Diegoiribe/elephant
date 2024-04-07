@@ -39,12 +39,12 @@ const Description = () => {
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectionone')}
           </h2>
-          <a
-            href="#home"
+          <Link
+            to={'/'}
             className="font-medium cursor-pointer phone:text-sm mac:text-[16px]"
           >
             {t('Footer.subtitle-one-one')}
-          </a>
+          </Link>
           <a
             href="#news"
             className="font-medium cursor-pointer phone:text-sm mac:text-[16px]"

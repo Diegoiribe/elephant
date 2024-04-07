@@ -74,7 +74,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
                 {t('Home.sectiontwo')}
               </li>
             </a>
-            <Link to={'/contact'}>
+            <Link to={'/contact'} onClick={() => setIsOpen(!isOpen)}>
               <li
                 className="text-3xl font-medium"
                 style={{
@@ -84,7 +84,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
                 {t('Home.sectionthree')}
               </li>
             </Link>
-            <Link to={'/shop'}>
+            <Link to={'/shop'} onClick={() => setIsOpen(!isOpen)}>
               <li
                 className="text-3xl font-medium"
                 style={{
@@ -126,12 +126,12 @@ const Nav = ({ isOpen, setIsOpen }) => {
                 <NewReleasesIcon className="text-white" />
               </li>
             </a>
-            <Link to={'/contact'}>
+            <Link to={'/contact'} onClick={() => setIsOpen(!isOpen)}>
               <li className="xl:text-xl">
                 <InboxIcon className="text-white" />
               </li>
             </Link>
-            <Link to={'/shop'}>
+            <Link to={'/shop'} onClick={() => setIsOpen(!isOpen)}>
               <li className="xl:text-xl">
                 <StorefrontIcon className="text-white" />
               </li>

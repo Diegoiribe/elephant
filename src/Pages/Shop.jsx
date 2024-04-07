@@ -9,7 +9,7 @@ const ShopPage = () => {
         <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
 
-      <div className="w-full flex justify-center items-center h-[50vh]">
+      <div className="w-full flex justify-center items-center h-[50vh] px-10">
         <h1 className="font-bold text-6xl overflow-hidden text-center">
           Coming Soon
         </h1>

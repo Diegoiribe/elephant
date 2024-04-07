@@ -41,7 +41,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
             <Link
               to={'/'}
               className="phone:text-2xl tablet:text-4xl font-bold
-              overflow-hidden"
+              overflow-hidden cursor-pointer"
               style={{
                 color: isOpen ? 'black' : 'white'
               }}
@@ -127,9 +127,12 @@ const Nav = ({ isOpen, setIsOpen }) => {
         </nav>
       ) : (
         <nav className="flex flex-row justify-around items-center py-4 overflow-hidden   w-screen z-50 bg-transparent h-28">
-          <h1 className="text-4xl font-bold text-white overflow-hidden f">
+          <Link
+            to={'/'}
+            className="text-4xl font-bold text-white overflow-hidden cursor-pointer"
+          >
             Elephant
-          </h1>
+          </Link>
           <ul className="flex flex-row gap-5 items-center justify-center">
             <Link to={'/'} onClick={() => setIsOpen(!isOpen)}>
               <li className="xl:text-xl">

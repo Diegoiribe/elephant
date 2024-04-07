@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import fondo from '../../../img/5.gif'
 import Nav from '../Nav'
 import { useTranslation } from 'react-i18next'
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../../../config'
+import { Link } from 'react-router-dom'
 
 const Slidder = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
@@ -48,9 +49,12 @@ const Slidder = ({ isOpen, setIsOpen }) => {
         <h1 className="text-white  tablet:text-6xl phone:text-4xl font-bold  overflow-hidden phone:text-center">
           {t('Home.title')}
         </h1>
-        <div className="py-4 px-8 bg-white font-bold  overflow-hidden">
+        <Link
+          to={'/shop'}
+          className="py-4 px-8 bg-white font-bold  overflow-hidden"
+        >
           {t('Home.button')}
-        </div>
+        </Link>
         <h2 className="text-white font-bold tablet:text-4xl phone:text-2xl  overflow-hidden phone:text-center">
           {t('Home.subtitle')}
         </h2>

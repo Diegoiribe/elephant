@@ -96,7 +96,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
             </Link>
             <li className="flex gap-5 h-[30%] justify-center items-end">
               <a
-                href="https://www.instagram.com/elephant.archives/"
+                href="https://x.com/elephantarchive?s=11&t=fpiOzKtInuinFSVNvBUUCg"
                 className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"
               >
                 <XIcon />

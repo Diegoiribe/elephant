@@ -94,14 +94,17 @@ const Description = () => {
         </div>
         <div className=" flex justify-around gap-5 phone:w-full mac:w-1/5">
           <a
-            href="https://elephant-two.vercel.app/"
+            href="https://x.com/elephantarchive?s=11&t=fpiOzKtInuinFSVNvBUUCg"
             className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"
           >
             <XIcon />
           </a>
-          <span className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white">
+          <a
+            href="https://www.facebook.com/share/uqEoWuyK1mNpCkbi/?mibextid=dGKdO6"
+            className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"
+          >
             <FacebookIcon />
-          </span>
+          </a>
           <a
             href="https://www.instagram.com/elephant.archives/"
             className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center cursor-pointer hover:bg-black hover:text-white"

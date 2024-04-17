@@ -28,28 +28,13 @@ const Shop = () => {
     }
   ])
 
-  const handleBuyProduct = async (productId) => {
-    try {
-      const response = await fetch('/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ productId })
-      })
-      if (response.ok) {
-        const session = await response.json()
-        // Aquí iría el redireccionamiento a Stripe Checkout
-        window.location.href = session.url
-        // por ejemplo: window.location = session.url;
-      } else {
-        // Manejar errores aquí, por ejemplo, mostrando un mensaje al usuario
-        console.error('Error al crear la sesión de checkout')
-      }
-    } catch (error) {
-      // Manejar errores aquí
-      console.error('Error al realizar la solicitud:', error)
-    }
+  const handleQuickView = async () => {
+    const res = await fetch('https://elephantarchives.com/payment', {
+      method: 'POST'
+    })
+    const data = await res.json()
+    console.log(data)
+    window.location.href = data.url
   }
 
   return (
@@ -67,7 +52,7 @@ const Shop = () => {
           >
             {/* Modificación aquí: */}
             <span
-              onClick={() => handleBuyProduct(item.id)}
+              onClick={() => handleQuickView()}
               className=" w-40 h-16 opacity-0 group-hover:opacity-100 absolute  flex justify-center items-center text-white bg-zinc-900  text-xl font-medium transition-opacity duration-300 rounded-md"
             >
               Quick View

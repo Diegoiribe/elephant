@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
+import App from './App.js'
+import reportWebVitals from './reportWebVitals.js'
 import { I18nextProvider } from 'react-i18next'
 import i18next from 'i18next'
-
 import es from './Translation/es/global.json'
 import en from './Translation/en/global.json'
 

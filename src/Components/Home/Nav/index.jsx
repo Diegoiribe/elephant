@@ -15,12 +15,15 @@ import { use } from 'i18next'
 const Nav = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
   const [home, setHome] = useState(false)
+  const [shop, setShop] = useState(false)
 
   const { pathname } = useLocation()
 
   useEffect(() => {
     if (pathname === '/') {
       setHome(true)
+    } else if (pathname === '/shop') {
+      setShop(true)
     }
   }, [pathname])
 
@@ -129,31 +132,50 @@ const Nav = ({ isOpen, setIsOpen }) => {
         <nav className="flex flex-row justify-around items-center py-4 overflow-hidden   w-screen z-50 bg-transparent h-28">
           <Link
             to={'/'}
-            className="text-4xl font-bold text-white overflow-hidden cursor-pointer"
+            className="text-4xl font-bold overflow-hidden cursor-pointer"
+            style={{
+              color: shop ? 'black' : 'white'
+            }}
           >
             Elephant
           </Link>
           <ul className="flex flex-row gap-5 items-center justify-center">
             <Link to={'/'}>
               <li className="xl:text-xl">
-                <HomeIcon className="text-white" />
+                <HomeIcon
+                  style={{
+                    color: shop ? 'black' : 'white'
+                  }}
+                />
               </li>
             </Link>
             {home ? (
               <a href="#news">
                 <li className="xl:text-xl">
-                  <NewReleasesIcon className="text-white" />
+                  <NewReleasesIcon
+                    style={{
+                      color: shop ? 'black' : 'white'
+                    }}
+                  />
                 </li>
               </a>
             ) : null}
             <Link to={'/contact'} onClick={() => setIsOpen(!isOpen)}>
               <li className="xl:text-xl">
-                <InboxIcon className="text-white" />
+                <InboxIcon
+                  style={{
+                    color: shop ? 'black' : 'white'
+                  }}
+                />
               </li>
             </Link>
             <Link to={'/shop'} onClick={() => setIsOpen(!isOpen)}>
               <li className="xl:text-xl">
-                <StorefrontIcon className="text-white" />
+                <StorefrontIcon
+                  style={{
+                    color: shop ? 'black' : 'white'
+                  }}
+                />
               </li>
             </Link>
           </ul>

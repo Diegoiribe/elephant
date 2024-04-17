@@ -35,7 +35,7 @@ const Description = () => {
         </select>
       </div>
       <div className='"mac:w-4/5 phone:w-full flex flex-row phone:flex-wrap mac:flex-nowrap gap-5 phone:justify-center'>
-        <div className=" flex flex-col gap-5 phone:w-[45%] mac:w-1/5">
+        <div className=" flex flex-col gap-5 phone:w-[45%] desktop:w-1/5 mac:w-[10%]">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectionone')}
           </h2>
@@ -84,7 +84,7 @@ const Description = () => {
             {t('Footer.subtitle-two-five')}
           </p>
         </div>
-        <div className=" flex flex-col gap-5 phone:w-[100%] phone:mb-10 mac:mb-0 mac:w-[22%]">
+        <div className=" flex flex-col gap-5 phone:w-[100%] phone:mb-10 mac:mb-0 mac:w-[30%] desktop:w-[22%]">
           <h2 className="text-gray-500 mac:font-medium phone:font-bold phone:text-sm mac:text-[16px]">
             {t('Footer.sectionthree')}
           </h2>

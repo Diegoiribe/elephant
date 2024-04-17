@@ -4,7 +4,7 @@ import ContactPage from './Pages/Contact'
 import Shop from './Pages/Shop'
 import Footer from './Components/Footer'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 function App() {

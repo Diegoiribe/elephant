@@ -28,15 +28,6 @@ const Shop = () => {
     }
   ])
 
-  const handleQuickView = async () => {
-    const res = await fetch('https://elephantarchives.com/payment', {
-      method: 'POST'
-    })
-    const data = await res.json()
-    console.log(data)
-    window.location.href = data.url
-  }
-
   return (
     <>
       {products.map((item, index) => (
@@ -51,10 +42,7 @@ const Shop = () => {
             }}
           >
             {/* Modificación aquí: */}
-            <span
-              onClick={() => handleQuickView()}
-              className=" w-40 h-16 opacity-0 group-hover:opacity-100 absolute  flex justify-center items-center text-white bg-zinc-900  text-xl font-medium transition-opacity duration-300 rounded-md"
-            >
+            <span className=" w-40 h-16 opacity-0 group-hover:opacity-100 absolute  flex justify-center items-center text-white bg-zinc-900  text-xl font-medium transition-opacity duration-300 rounded-md">
               Quick View
             </span>
           </div>

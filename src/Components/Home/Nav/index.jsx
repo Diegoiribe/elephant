@@ -16,6 +16,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
   const [t, i18n] = useTranslation('global')
   const [home, setHome] = useState(false)
   const [shop, setShop] = useState(false)
+  const [checkout, setCheckout] = useState(false)
 
   const { pathname } = useLocation()
 
@@ -24,6 +25,8 @@ const Nav = ({ isOpen, setIsOpen }) => {
       setHome(true)
     } else if (pathname === '/shop') {
       setShop(true)
+    } else if (pathname === '/checkout') {
+      setCheckout(true)
     }
   }, [pathname])
 
@@ -134,7 +137,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
             to={'/'}
             className="text-4xl font-bold overflow-hidden cursor-pointer"
             style={{
-              color: shop ? 'black' : 'white'
+              color: shop || checkout ? 'black' : 'white'
             }}
           >
             Elephant
@@ -144,7 +147,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
               <li className="xl:text-xl">
                 <HomeIcon
                   style={{
-                    color: shop ? 'black' : 'white'
+                    color: shop || checkout ? 'black' : 'white'
                   }}
                 />
               </li>
@@ -154,7 +157,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
                 <li className="xl:text-xl">
                   <NewReleasesIcon
                     style={{
-                      color: shop ? 'black' : 'white'
+                      color: shop || checkout ? 'black' : 'white'
                     }}
                   />
                 </li>
@@ -164,7 +167,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
               <li className="xl:text-xl">
                 <InboxIcon
                   style={{
-                    color: shop ? 'black' : 'white'
+                    color: shop || checkout ? 'black' : 'white'
                   }}
                 />
               </li>
@@ -173,7 +176,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
               <li className="xl:text-xl">
                 <StorefrontIcon
                   style={{
-                    color: shop ? 'black' : 'white'
+                    color: shop || checkout ? 'black' : 'white'
                   }}
                 />
               </li>

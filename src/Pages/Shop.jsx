@@ -18,7 +18,7 @@ const ShopPage = () => {
           {t('Shop.title')}
         </h1>
       </div>
-      <div className="flex w-4/6 flex-wrap justify-between">
+      <div className="flex mac:w-4/6 flex-wrap justify-between phone:w-5/6">
         <Shop />
       </div>
     </div>

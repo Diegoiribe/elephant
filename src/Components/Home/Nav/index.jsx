@@ -49,7 +49,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
               className="phone:text-2xl tablet:text-4xl font-bold
               overflow-hidden cursor-pointer"
               style={{
-                color: isOpen ? 'black' : 'white'
+                color: shop || isOpen ? 'black' : 'white'
               }}
             >
               {t('Home.name')}
@@ -59,10 +59,22 @@ const Nav = ({ isOpen, setIsOpen }) => {
 
               <span
                 style={{
-                  color: isOpen ? 'black' : 'white'
+                  color: shop || isOpen ? 'black' : 'white'
                 }}
               >
-                {isOpen ? <CloseIcon /> : <MenuIcon />}
+                {isOpen ? (
+                  <CloseIcon
+                    style={{
+                      color: shop || isOpen ? 'black' : 'white'
+                    }}
+                  />
+                ) : (
+                  <MenuIcon
+                    style={{
+                      color: shop || isOpen ? 'black' : 'white'
+                    }}
+                  />
+                )}
               </span>
             </button>
           </div>

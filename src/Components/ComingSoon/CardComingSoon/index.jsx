@@ -1,34 +1,25 @@
-import { Opacity } from '@mui/icons-material'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { buscar } from '../../../api'
 import './style.css'
 
 const CardComingSoon = () => {
-  const [cardComingSoon, setCardComingSoon] = useState([
-    {
-      title: 'Fresh Vibes',
-      img: require('../../../img/elephantlogo.gif'),
-      state: 'Available',
-      date: '2024-03-31',
-      description:
-        'Boom! That’s the sound of transformation hitting the streets.'
-    },
-    {
-      title: 'First Drop',
-      img: require('../../../img/firstdrop.png'),
-      state: 'Available',
-      date: '2024-05-05',
-      description:
-        'First glimpses of the inaugural Mew-Tracks drop: Where mystique meets the streets.'
-    }
-  ])
+  const [cardComingSoon, setCardComingSoon] = useState([])
+
+  useEffect(() => {
+    buscar(`/cards`, setCardComingSoon)
+  }, [])
+
+  console.log(cardComingSoon)
 
   return (
     <>
-      {[...cardComingSoon].reverse().map((item, index) => (
-        <div className="flex flex-col h-full max-w-96 bg-white min-w-96 shadow-custom rounded-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer">
+      {cardComingSoon.map((item, index) => (
+        <div
+          key={index}
+          className="flex flex-col h-full max-w-96 bg-white min-w-96 shadow-custom rounded-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer"
+        >
           <div
             className="h-3/4 bg-white"
-            key={index}
             style={{
               backgroundImage: `url(${item.img})`,
               backgroundSize: 'cover',

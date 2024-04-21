@@ -1,45 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { buscar } from '../../api'
 
 const Shop = () => {
-  const [products, setProducts] = useState([
-    {
-      img: 'https://images.squarespace-cdn.com/content/v1/5ee3d33b0118603e6ef3a46e/1712339463367-4PQU3TWBU1MUQFRNVNS0/33B9DC37-C754-491F-8763-88023E263092.png?format=750w',
-      title: '[LIMITED] DIVINE BRICK FIGURE',
-      price: 34.99,
-      status: 'Sold Out',
-      id: 4
-    },
-    {
-      img: 'https://images.squarespace-cdn.com/content/v1/5ee3d33b0118603e6ef3a46e/1712339396594-60TXP8BVW9B4NEIEO7K0/7AFA4D48-3EBB-448B-BA34-67E554436320.png?format=750w',
-      title: '[LIMITED] TINY BRICK SET',
-      price: 99.99,
-      status: 'Sold Out',
-      id: 3
-    },
-    {
-      img: 'https://images.squarespace-cdn.com/content/v1/5ee3d33b0118603e6ef3a46e/1712339463367-4PQU3TWBU1MUQFRNVNS0/33B9DC37-C754-491F-8763-88023E263092.png?format=750w',
-      title: '[LIMITED] DIVINE BRICK FIGURE',
-      price: 34.99,
-      status: 'Sold Out',
-      id: 1
-    },
-    {
-      img: 'https://images.squarespace-cdn.com/content/v1/5ee3d33b0118603e6ef3a46e/1712339396594-60TXP8BVW9B4NEIEO7K0/7AFA4D48-3EBB-448B-BA34-67E554436320.png?format=750w',
-      title: '[LIMITED] TINY BRICK SET',
-      price: 99.99,
-      status: 'Sold Out',
-      id: 2
-    }
-  ])
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    buscar('/items', setProducts)
+  }, [])
 
   const handleBuyClick = async (price, id) => {
     try {
       // Asume que 'price' ya está en dólares y necesita ser convertido a centavos
-      const { data } = await axios.post('http://localhost:3000/payment', {
-        id: id,
-        amount: Math.round(price * 100) // Asegúrate de enviar un entero
-      })
+      const { data } = await axios.post(
+        'https://apistripetest.onrender.com/api/checkout',
+        {
+          id: id,
+          amount: Math.round(price * 100) // Asegúrate de enviar un entero
+        }
+      )
       console.log(data)
 
       // Asegúrate de que la URL de la sesión se incluya correctamente en la respuesta del servidor

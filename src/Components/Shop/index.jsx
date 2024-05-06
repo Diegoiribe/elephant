@@ -4,19 +4,28 @@ import { buscar } from '../../api'
 
 const Shop = () => {
   const [products, setProducts] = useState([])
+  const [chase, setChase] = useState(false)
+
+  const handleChaseChange = (event) => {
+    setChase(event.target.checked)
+  }
 
   useEffect(() => {
     buscar('/items', setProducts)
   }, [])
 
-  const handleBuyClick = async (price, id) => {
+  const handleBuyClick = async (price, id, name, img) => {
     try {
       // Asume que 'price' ya está en dólares y necesita ser convertido a centavos
       const { data } = await axios.post(
-        'https://apistripetest.onrender.com/api/checkout',
+        'https://stripeelephant.onrender.com/payment',
         {
           id: id,
-          amount: Math.round(price * 100) // Asegúrate de enviar un entero
+          name: name,
+          img: img,
+          amount: Math.round(price * 100),
+          chase: chase ? 'yes' : 'no'
+          // Asegúrate de enviar un entero
         }
       )
       console.log(data)
@@ -38,27 +47,56 @@ const Shop = () => {
       {products.map((item) => (
         <div
           key={item.id}
-          className="phone:w-full mac:w-[30%] h-[60vh] mb-24 cursor-pointer relative group"
+          className="phone:w-full mac:w-[30%] phone:h-[70vh] mac:h-[60vh] mb-24 cursor-pointer relative group flex flex-col gap-5"
         >
           <div
-            className="w-full h-[75%] bg-cover bg-center relative flex justify-center items-center"
+            className="w-full phone:h-[65%] mac:h-[75%] bg-cover bg-center relative flex justify-center items-center"
             style={{
               backgroundImage: `url(${item.img})`
             }}
           >
             {/* Modificación aquí: */}
-            <span
+            {/* <span
               className=" w-40 h-16 opacity-0 group-hover:opacity-100 absolute  flex justify-center items-center text-white bg-zinc-900  text-xl font-medium transition-opacity duration-300 rounded-md"
-              onClick={() => handleBuyClick(item.price, item.id)}
+              onClick={() =>
+                handleBuyClick(item.price, item.id, item.title, item.img)
+              }
             >
               Quick View
-            </span>
+            </span> */}
           </div>
-          <div className="w-full h-[25%] flex flex-col justify-around px-10">
-            <h1 className="text-xl font-bold text-black">{item.title}</h1>
-            <p className="font-bold">${item.price}</p>
-            <div className="w-full flex items-end justify-end">
-              <p className="font-bold">{item.status}</p>
+          <div className="w-full phone:h-[35%] mac:h-[25%] flex flex-col justify-around">
+            <h1 className="text-xl font-bold text-black px-10">{item.title}</h1>
+            <p className="font-bold px-10 overflow-hidden">${item.price}</p>
+            <div className="w-full flex items-center justify-between mt-5">
+              {item.status !== 'Coming Soon' ? (
+                <p className="font-medium w-full text-end">{item.status}</p>
+              ) : (
+                <>
+                  <label
+                    htmlFor="chase"
+                    className="text-sm text-gray-500 w-2/6 "
+                  >
+                    Do you want a chase?
+                    <input
+                      id="chase"
+                      type="checkbox"
+                      className="mx-5"
+                      checked={chase}
+                      onChange={handleChaseChange}
+                    />
+                  </label>
+
+                  <p
+                    className="bg-neutral-800 hover:bg-black  w-2/6 p-2 font-bold uppercase text-white cursor-pointer disabled:cursor-not-allowed text-center"
+                    onClick={() =>
+                      handleBuyClick(item.price, item.id, item.title, item.img)
+                    }
+                  >
+                    Pay
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>

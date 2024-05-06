@@ -23,7 +23,7 @@ const Nav = ({ isOpen, setIsOpen }) => {
   useEffect(() => {
     if (pathname === '/') {
       setHome(true)
-    } else if (pathname === '/shop') {
+    } else if (pathname === '/shop' || pathname === '/success') {
       setShop(true)
     } else if (pathname === '/checkout') {
       setCheckout(true)

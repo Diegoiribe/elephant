@@ -32,13 +32,14 @@ const CheckoutForm = () => {
 
       try {
         const { data } = await axios.post(
-          'https://apistripetest.onrender.com/api/checkout',
+          'http://localhost:3001/api/checkout',
           {
             id,
             amount: 10000
           }
         )
         console.log(data)
+        console.log(id)
 
         elements.getElement(CardElement).clear()
       } catch (error) {

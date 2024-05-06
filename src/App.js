@@ -6,7 +6,7 @@ import Footer from './Components/Footer/index.jsx'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import CheckOut from './Pages/Checkout.jsx'
+import SuccessPage from './Pages/Succes.jsx'
 
 function App() {
   const ScrollToTop = () => {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/success" element={<SuccessPage />} />
         <Route path="*" element={<Shop />} />
       </Routes>
       <Footer />

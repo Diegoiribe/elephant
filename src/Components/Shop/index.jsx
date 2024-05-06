@@ -14,7 +14,7 @@ const Shop = () => {
     buscar('/items', setProducts)
   }, [])
 
-  const handleBuyClick = async (price, id, name, img) => {
+  const handleBuyClick = async (price, id, name, img, chase) => {
     try {
       // Asume que 'price' ya está en dólares y necesita ser convertido a centavos
       const { data } = await axios.post(
@@ -24,7 +24,7 @@ const Shop = () => {
           name: name,
           img: img,
           amount: Math.round(price * 100),
-          chase: chase ? 'yes' : 'no'
+          chase: chase
           // Asegúrate de enviar un entero
         }
       )
@@ -69,7 +69,7 @@ const Shop = () => {
             <h1 className="text-xl font-bold text-black px-10">{item.title}</h1>
             <p className="font-bold px-10 overflow-hidden">${item.price}</p>
             <div className="w-full flex items-center justify-between mt-5">
-              {item.status !== 'Coming Soon' ? (
+              {item.status === 'Coming Soon' ? (
                 <p className="font-medium w-full text-end">{item.status}</p>
               ) : (
                 <>
@@ -90,7 +90,13 @@ const Shop = () => {
                   <p
                     className="bg-neutral-800 hover:bg-black  w-2/6 p-2 font-bold uppercase text-white cursor-pointer disabled:cursor-not-allowed text-center"
                     onClick={() =>
-                      handleBuyClick(item.price, item.id, item.title, item.img)
+                      handleBuyClick(
+                        item.price,
+                        item.id,
+                        item.title,
+                        item.img,
+                        chase
+                      )
                     }
                   >
                     Pay

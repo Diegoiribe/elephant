@@ -17,17 +17,14 @@ const Shop = () => {
   const handleBuyClick = async (price, id, name, img, chase) => {
     try {
       // Asume que 'price' ya está en dólares y necesita ser convertido a centavos
-      const { data } = await axios.post(
-        'https://stripeelephant.onrender.com/payment',
-        {
-          id: id,
-          name: name,
-          img: img,
-          amount: Math.round(price * 100),
-          chase: chase
-          // Asegúrate de enviar un entero
-        }
-      )
+      const { data } = await axios.post('http://localhost:3000/payment', {
+        id: id,
+        name: name,
+        img: img,
+        amount: Math.round(price * 100),
+        chase: chase
+        // Asegúrate de enviar un entero
+      })
       console.log(data)
 
       // Asegúrate de que la URL de la sesión se incluya correctamente en la respuesta del servidor
@@ -50,7 +47,7 @@ const Shop = () => {
           className="phone:w-full mac:w-[30%] phone:h-[70vh] mac:h-[60vh] mb-24 cursor-pointer relative group flex flex-col gap-5"
         >
           <div
-            className="w-full phone:h-[65%] mac:h-[75%] bg-cover bg-center relative flex justify-center items-center"
+            className="w-full phone:h-[65%] mac:h-[65%] desktop:h-[75%] bg-cover bg-center relative flex justify-center items-center"
             style={{
               backgroundImage: `url(${item.img})`
             }}
@@ -65,19 +62,21 @@ const Shop = () => {
               Quick View
             </span> */}
           </div>
-          <div className="w-full phone:h-[35%] mac:h-[25%] flex flex-col justify-around">
+          <div className="w-full phone:h-[35%] mac:h-[35%] desktop:h-[25%] flex flex-col justify-around">
             <h1 className="text-xl font-bold text-black px-10">{item.title}</h1>
             <p className="font-bold px-10 overflow-hidden">${item.price}</p>
-            <div className="w-full flex items-center justify-between mt-5">
+            <div className="w-full  flex items-center justify-between mt-5">
               {item.status === 'Coming Soon' ? (
-                <p className="font-medium w-full text-end">{item.status}</p>
+                <p className="font-medium w-full text-end overflow-hidden">
+                  {item.status}
+                </p>
               ) : (
                 <>
                   <label
                     htmlFor="chase"
-                    className="text-sm text-gray-500 w-2/6 "
+                    className="text-sm text-gray-500 w-3/6 "
                   >
-                    Do you want a chase?
+                    Want in on the shiny edition?"
                     <input
                       id="chase"
                       type="checkbox"

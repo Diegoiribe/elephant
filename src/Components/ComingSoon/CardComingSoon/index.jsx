@@ -6,16 +6,22 @@ const CardComingSoon = () => {
   const [cardComingSoon, setCardComingSoon] = useState([])
 
   useEffect(() => {
-    buscar(`/cards`, setCardComingSoon)
+    try {
+      buscar(`/cards`, (response) => {
+        const dataArray = Array.isArray(response.data) ? response.data : []
+        setCardComingSoon(dataArray)
+      })
+    } catch (error) {
+      console.error('Error during payment:', error)
+      setCardComingSoon([])
+    }
   }, [])
-
-  console.log(cardComingSoon)
 
   return (
     <>
-      {cardComingSoon.map((item, index) => (
+      {cardComingSoon.map((item) => (
         <div
-          key={index}
+          key={item.id}
           className="flex flex-col h-full max-w-96 bg-white min-w-96 shadow-custom rounded-3xl hover:-translate-y-1 transition-all duration-300 ease-in-out cursor-pointer"
         >
           <div

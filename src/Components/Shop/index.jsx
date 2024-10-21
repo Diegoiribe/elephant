@@ -11,7 +11,15 @@ const Shop = () => {
   }
 
   useEffect(() => {
-    buscar('/items', setProducts)
+    try {
+      buscar(`/items`, (response) => {
+        const dataArray = Array.isArray(response.data) ? response.data : []
+        setProducts(dataArray)
+      })
+    } catch (error) {
+      console.error('Error during payment:', error)
+      setProducts([])
+    }
   }, [])
 
   const handleBuyClick = async (price, id, name, img, chase) => {
